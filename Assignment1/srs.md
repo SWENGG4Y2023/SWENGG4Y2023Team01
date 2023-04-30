@@ -16,6 +16,16 @@
    -  [2.6 Assumptions & Dependencies](#26-assumptions--dependencies)
 -  [3. System Features](#3-system-features)
    -  [3.1 Functional Requirements](#31-functional-requirements)
+-  [4. External Interface Requirements](#4-external-interface-requirements)
+   -  [4.1 User Interface Requirements](#41-user-interface-requirements)
+   -  [4.2 Hardware Interface Requirements](#42-hardware-interface-requirements)
+   -  [4.3 Software Interface Requirements](#43-software-interface-requirements)
+   -  [4.4 Communication Interface Requirements](#44-communication-interface-requirements)
+-  [5. Non – functional Requirements](#5-non-–-functional-requirements)
+   -  [5.1 Performance Requirements](#51-performance-requirements)
+   -  [5.2 Safety Requirements](#52-safety-requirements)
+   -  [5.3 Security Requirements](#53-security-requirements)
+   -  [5.4 Software Quality Attributes](#54-software-quality-attributes)
 ## 1. Introduction
 
    - ### **1.1 Purpose**
@@ -161,3 +171,132 @@
       11. ***Accessibility:*** The service should be designed to be accessible to users with disabilities, following accessibility guidelines and standards. This may include features such as closed captioning, audio descriptions, and other accessibility options.
 
       12. ***Security and Privacy:*** The service should implement robust security measures to protect user data, including authentication, encryption, and data privacy. The service should also comply with applicable privacy regulations, such as GDPR or CCPA, and provide options for users to manage their privacy settings, data sharing, and consent preferences.
+# 4. External Interface Requirements
+   - ## **4.1 User Interface Requirements**
+      1. ***Home Page:***
+      The home page of the application shall contain a list of recommended movies and TV shows based on the user's viewing history and preferences.
+      The home page shall also contain a search bar to allow users to search for specific movies or TV shows.
+      
+      2. ***Movie/TV Show Page:***
+      The movie/TV show page shall display the title, poster, synopsis, rating, and other relevant information about the selected movie or TV show.
+      The page shall also display a list of related movies or TV shows that the user might be interested in.
+   
+      3. ***Watchlist:***
+      The user interface shall allow users to add movies or TV shows to their watchlist.
+      The watchlist shall be accessible from the user's profile page and shall display all the movies and TV shows added by the user.
+      
+      4. ***Playback Controls:***
+      The user interface shall provide playback controls such as play, pause, stop, rewind, and fast-forward.
+      The playback controls shall also include a volume slider and a full-screen button.
+
+      5. ***Subscription Plan:***
+      The user interface shall allow users to view the subscription plans offered by the service and choose the plan that best fits their needs.
+      The subscription plan page shall display the benefits and pricing of each plan.
+      These are just some of the User Interface requirements that can be included in the SRS document for Netflix-like streaming service.
+
+
+   -  ## **4.2 Hardware Interface Requirements**
+      1. ***Display:***
+      The streaming service shall support video playback on different display sizes and resolutions, including desktop monitors, laptops, tablets, and mobile phones.
+      The video playback shall be optimized for the display resolution and size to ensure the best viewing experience for the user.
+
+      2. ***Audio:***
+      The streaming service shall support stereo and surround sound audio playback, depending on the user's device capabilities.
+      The service shall also support different audio codecs to ensure compatibility with a wide range of devices.
+
+      3. ***Network:***
+      The streaming service shall require an internet connection with a minimum bandwidth of 5 Mbps for standard definition (SD) playback and 25 Mbps for high definition (HD) playback.
+      The service shall support different network technologies, including Wi-Fi and cellular data, to ensure accessibility for users in different locations.
+
+      4. ***Storage:***
+      The streaming service shall not require any local storage on the user's device, as all movies and TV shows shall be streamed directly from the service's servers.
+      However, the service shall allow users to download movies and TV shows for offline playback, provided they have sufficient storage capacity on their device.
+      These are just some of the hardware interface requirements that can be included in the SRS document for a Netflix-like streaming service.
+
+   -  ## **4.3 Software Interface Requirements**
+      1. ***Operating System:***
+      The streaming service shall support different operating systems, including Windows, macOS, iOS, Android, and Linux, to ensure compatibility with a wide range of devices.
+      The service shall also provide system requirements for each supported operating system to ensure optimal performance.
+
+      2. ***Web Browser:***
+      The streaming service shall support different web browsers, including Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge.
+      The service shall also provide guidelines for browser settings and plug-ins to ensure optimal playback and security.
+      
+      3. ***Content Delivery Network (CDN):***
+      The streaming service shall use a Content Delivery Network (CDN) to distribute movies and TV shows to users.
+      The CDN shall ensure fast and reliable delivery of the content to users by caching the content on multiple servers located around the world.
+      
+      4. ***Payment Gateway:***
+      The streaming service shall integrate with a payment gateway to process user payments for subscription plans and other transactions.
+      The payment gateway shall ensure secure and reliable payment processing and shall support different payment methods, including credit cards, PayPal, and other online payment systems.
+      These are just some of the software interface requirements that can be included in the SRS document for a Netflix-like streaming service.
+
+   -  ## **4.4 Communication Interface Requirements**
+      1. ***API:***
+         The streaming service shall provide an API (Application Programming Interface) to allow third-party developers to integrate the service into their applications.
+         The API shall provide access to the service's movie and TV show catalog, user data, and other relevant information.
+      
+      2. ***Social Media Integration:***
+         The streaming service shall integrate with popular social media platforms, including Facebook, Twitter, and Instagram, to allow users to share their favorite movies and TV shows with their friends and followers.
+         The service shall also allow users to log in using their social media credentials to simplify the registration and login process.
+      
+      3. ***Customer Support:***
+         The streaming service shall provide customer support through different communication channels, including email, phone, and chat.
+         The service shall also provide an FAQ section and a community forum to help users find solutions to common issues.
+      
+      4. ***Content Providers:***
+      The streaming service shall negotiate licensing agreements with different content providers, including movie studios and TV networks, to acquire the rights to stream their content.
+      The service shall also comply with copyright laws and ensure that all the content streamed on the service is properly licensed and credited.
+      These are just some of the communication interface requirements that can be included in the SRS document for a Netflix-like streaming service.
+# **5. Non – functional Requirements**
+
+   -  ## **5.1 Performance Requirements**
+      1.	***Response Time:*** The time taken by the system to respond to user requests should be less than 1 second for most operations, such as searching for a movie or starting a video playback.
+      2.	***Playback Quality:*** The system should deliver video content in high quality, with minimal buffering or stuttering, even under adverse network conditions. The video quality should be optimized according to the user's device and network bandwidth.
+      3.	***Scalability:*** The system should be able to handle a large number of concurrent users, particularly during peak hours, without experiencing any significant slowdown or crashes. The system should be able to scale up or down dynamically based on the user load.
+      4.	***Availability:*** The system should be available to users 24/7, with a minimum uptime of 99.9%. Any scheduled maintenance or downtime should be communicated to users in advance.
+      5.	***Security:*** The system should protect user data and prevent unauthorized access to the platform. The system should be able to detect and prevent security threats, such as DDoS attacks, SQL injection attacks, and cross-site scripting attacks.
+      6.	***Reliability:*** The system should be reliable, with a low probability of errors or system crashes. The system should have mechanisms to recover from errors and prevent data loss.
+      7.	***Responsiveness:*** The system should be responsive to user actions, such as fast-forwarding or pausing a video. The system should be able to detect and respond to these actions quickly and accurately.
+      8.	***Compliance:*** The system should comply with industry standards and regulations, such as the Digital Millennium Copyright Act (DMCA) and the General Data Protection Regulation (GDPR).
+
+   -  ## **5.2 Safety Requirements**
+      1. ***User Safety:*** The system should ensure the safety of users while using the service. The service should have clear guidelines for appropriate content, and any inappropriate content, such as violence or adult content, should be clearly marked and filtered appropriately. The system should also have mechanisms to detect and prevent cyberbullying and harassment.
+
+      2. ***Content Safety:*** The system should ensure that the content provided through the service is safe and does not contain any malicious content, such as malware, viruses, or spyware. The system should also have mechanisms to detect and prevent copyright infringement, piracy, and illegal content.
+
+      3. ***Platform Safety:*** The system should ensure the safety of the platform itself. The system should have measures in place to detect and prevent unauthorized access, tampering, and other security breaches. The system should also be designed to avoid system crashes and ensure high availability.
+
+      4. ***Data Safety:*** The system should ensure the safety of user data. The system should have mechanisms to protect user data from unauthorized access, tampering, and theft. The system should also have measures in place to prevent data loss, corruption, or damage.
+
+      5. ***Emergency Procedures:*** The system should have emergency procedures in place to handle unforeseen events, such as natural disasters, power outages, or system failures. The system should have measures in place to minimize the impact of these events on the service and ensure a quick recovery.
+
+      6. ***Compliance:*** The system should comply with relevant safety regulations and standards, such as the Occupational Safety and Health Administration (OSHA) standards and the National Fire Protection Association (NFPA) codes.
+ 
+   -  ## **5.3 Security Requirements**
+      1. ***Access Control:*** The system should provide proper access control mechanisms to ensure that only authorized personnel have access to the system's sensitive data and functionalities. User authentication and authorization mechanisms should be in place to verify the identity of users and grant them appropriate access privileges.
+
+      2. ***Secure Communication:*** The system should use secure communication protocols such as HTTPS and SSL/TLS to ensure the confidentiality and integrity of the communication between the client and server. Sensitive data, such as user credentials and payment information, should be encrypted before being transmitted over the network.
+
+      3. ***Data Protection:*** The system should protect user data from unauthorized access and prevent data loss, corruption, or theft. Appropriate data backup and recovery mechanisms should be in place in case of data loss or system failure.
+
+      4. ***Auditing and Monitoring:*** The system should maintain logs of all user activities and system events to detect and prevent security breaches. The system should also have real-time monitoring mechanisms in place to detect and respond to security threats, such as intrusion attempts, malware attacks, and unauthorized access.
+
+      5. ***Compliance:*** The system should comply with relevant industry standards and regulations, such as the General Data Protection Regulation (GDPR) and the Payment Card Industry Data Security Standard (PCI DSS).
+
+      6. ***Vulnerability Management:*** The system should have a comprehensive vulnerability management program that includes regular security assessments, threat modeling, and penetration testing. The system should also have mechanisms to promptly address identified vulnerabilities and apply appropriate security patches and updates.
+
+      7. ***Incident Response:*** The system should have an incident response plan in place to respond to security incidents, such as data breaches and system compromises. The plan should define roles and responsibilities, communication procedures, and escalation paths to ensure a timely and effective response.
+ 
+   -  ## **5.4 Software Quality Attributes**
+      1. ***User Safety:*** The system should ensure the safety of users while using the service. The service should have clear guidelines for appropriate content, and any inappropriate content, such as violence or adult content, should be clearly marked and filtered appropriately. The system should also have mechanisms to detect and prevent cyberbullying and harassment.
+
+      2. ***Content Safety:*** The system should ensure that the content provided through the service is safe and does not contain any malicious content, such as malware, viruses, or spyware. The system should also have mechanisms to detect and prevent copyright infringement, piracy, and illegal content.
+
+      3. ***Platform Safety:*** The system should ensure the safety of the platform itself. The system should have measures in place to detect and prevent unauthorized access, tampering, and other security breaches. The system should also be designed to avoid system crashes and ensure high availability.
+
+      4. ***Data Safety:*** The system should ensure the safety of user data. The system should have mechanisms to protect user data from unauthorized access, tampering, and theft. The system should also have measures in place to prevent data loss, corruption, or damage.
+
+      5. ***Emergency Procedures:*** The system should have emergency procedures in place to handle unforeseen events, such as natural disasters, power outages, or system failures. The system should have measures in place to minimize the impact of these events on the service and ensure a quick recovery.
+
+      6. ***Compliance:*** The system should comply with relevant safety regulations and standards, such as the Occupational Safety and Health Administration (OSHA) standards and the National Fire Protection Association (NFPA) codes.
