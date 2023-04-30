@@ -15,6 +15,6 @@ BITS ID     | Name
 Netflix is a subscription-based streaming service that offers a vast library of TV shows, movies, documentaries, and original content. Users can access the platform on any device with internet access, and its personalized recommendation system suggests content based on viewing history and preferences.
 
 ## Documents
-### Stakeholder Document - [Here](link)
-### User requirements document/ System Definition document - [Here](link)
-### SRS Document  - [Here](link)
+### Stakeholder Document - [Here](Assignment1/Stakeholder.md)
+### User requirements document/ System Definition document - [Here](Assignment1/User%20Requirements%20Document.md)
+### SRS Document  - [Here](Assignment1/srs.md)
