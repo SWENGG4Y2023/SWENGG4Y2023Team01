@@ -1,0 +1,20 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+
+' LAYOUT_WITH_LEGEND()
+
+title System Context diagram for Netflix
+
+Person(customer, "Viewers", "A subscribtion account holder.")
+System(netflix_system, "NETFLIX", "System to continuously deliver video content via the Internet to the remote viewers.")
+
+System_Ext(cdn, "Content Delivery Network", "Stores, manages and Distributes video content")
+System_Ext(emailSystem, "Email System","An external exchange system for emails")
+System_Ext(userDbms,"AWS Cloud storage","Stores user profiles,credentials,preferences & viewing history")
+
+Rel(customer, netflix_system, "Searches and Views video content")
+Rel(netflix_system, cdn, "Fetches Video Content")
+Rel(netflix_system, emailSystem, "sends emails to")
+Rel(netflix_system,userDbms,"Access user related content")
+@enduml

@@ -1,0 +1,33 @@
+@startuml 
+title Container diagram for Netflix System
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(customer, "Viewers", "A subscribtion holder that can access and view content.")
+System_Boundary(sb, "Netflix System") {
+    Container(user_app, "User Application(web/mobile/smart tv app)", "React JS, Node JS", "Browser interface for delivering the content to viewers.")
+    Container(accountService,"Account Service","Service for handling user authentication, account & subscription management")
+    Container(contentDeliveryService,"Content Delivery Service","Java,SpringBoot","Serves the APIs for accessing the content & its information")
+    Container(emailService,"Email Service","A service to send & dispatch emails.")
+    Container(userService,"User Content Service","python,AI,ML","Service to provide user related content such as recommendations,viewing history,searching,etc.")
+    
+}
+together {
+System_Ext(contentDeliveryNetwork, "Content Delivery Network","Stores,manages & distributes video content.")
+System_Ext(emailSystem, "Email System","An external exchange system for emails")
+System_Ext(userDbms,"AWS Cloud storage","Stores user profiles,credentials,preferences & viewing history")
+}
+
+Rel(customer, user_app, "Access & view content")
+Rel(contentDeliveryService,contentDeliveryNetwork,"fetches video contents from")
+Rel(userService,contentDeliveryNetwork,"references items from")
+Rel(user_app,accountService,"authenticates users with")
+Rel(user_app,contentDeliveryService,"makes API calls to")
+
+Rel(accountService,emailService,"Handles emails with")
+Rel(user_app,userService,"saves and searches content related data from")
+Rel(emailService,emailSystem,"sends emails to")
+Rel(accountService,userDbms,"fetches and saves user account data")
+Rel(userService,userDbms,"reads & saves user content data")
+Rel(contentDeliveryService,userDbms,"saves video links in multiple file formats")
+
+@enduml
